@@ -3,13 +3,25 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <script src="main.js"></script>
+    
   </head>
   <body>
     <h1>Hello World!</h1>
     <hr/>
     <div id="display-element"></div>
     <button onclick="displayDate()">Click Me</button>
-    <hr/>
+    <hr>
+    <!-- this is for the num2String function -->
+    <input id="numInStringOut__Input" type="number" placeholder="Enter a #" onkeyup="updateNum(this)" >
+    <button id="convertNum2String" onclick="convertNum()">Convert</button>
+    <div id="resultingStr"></div>
+    <hr>
+    <!-- this is for the str2Num function -->
+    <input type="text" id="string2Num__input" placeholder="Enter a #" onkeyup="updateString(this)">
+    <button id="convertString2Num" onclick="convertStr()">Convert</button>
+    <div id="resultingNum"></div>
+    <hr>
   </body>
+  <script src="main.js"></script>
 </html>
+<!-- create inputs, buttons and event listeners that render the code blocks you built above to the DOM. -->
