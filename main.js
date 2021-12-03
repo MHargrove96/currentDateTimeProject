@@ -144,12 +144,12 @@ let guessOne = ''
 let guessTwo = ''
 
 const guessOneCheck = (g1) => {
-  guessOne = g1.value
+  guessOne = +g1.value
   console.log(g1.value)
 }
 
 const guessTwoCheck = (g2) => {
-  guessTwo = g2.value
+  guessTwo = +g2.value
   console.log(g2.value)
 }
 
@@ -157,9 +157,9 @@ const bothWrong = () =>{
   let randomNum = Math.floor((Math.random() *10) + 1);
   console.log(randomNum)
 
-  if(guessOneCheck != randomNum && guessTwoCheck != randomNum){
+  if(guessOne !== randomNum && guessTwo !== randomNum){
     document.getElementById('guessAnswer').innerHTML = 'HaHa you lose better luck next time!! My number was' + ' ' + randomNum;
-  } else if(guessOneCheck == randomNum || guessTwoCheck == randomNum){
+  } else if(guessOne == randomNum || guessTwo == randomNum){
     document.getElementById('guessAnswer').innerHTML = 'What! No you cheated, or omg are you a psychic!!! My number was' + ' ' + randomNum;
   }
 }
