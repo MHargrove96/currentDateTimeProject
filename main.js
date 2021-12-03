@@ -18,8 +18,8 @@ const displayDate = () => {
 // Write a JavaScript program to convert a number to a string.
 //function declaration
 // ..................................................................................................................
-let numInput = 0 
-console.log(numInput)
+let numInput = 1 
+
 function updateNum(num){
   numInput = num.value
   console.log(num.value)
@@ -28,7 +28,7 @@ function updateNum(num){
 function convertNum(convertedNum) {
   convertedNum = numInput.toString()
 
-  document.getElementById("resultingStr").innerHTML = convertedNum + ' ' + 'I am now a string'
+  document.getElementById("resultingStr").innerHTML = convertedNum + ' ' + 'I am now a string, you can check in the console'
   console.log(convertedNum)
 }
 // ..................................................................................................................
@@ -49,39 +49,69 @@ const updateString = (newString) => {
 const convertStr = (convertedStr) => {
   convertedStr = parseInt(stringInput);
 
-  document.getElementById("resultingNum").innerHTML = convertedStr + ' ' + 'I am now a number'
+  document.getElementById("resultingNum").innerHTML = convertedStr + ' ' + 'I am now a number, you can check in the console'
   console.log(convertedStr)
 }
 // ..................................................................................................................
 // Write a JavaScript program that takes in different datatypes and prints out whether they are a:
 // ..................................................................................................................
-// const checkType = (dataCheck) => {
-//   console.log(typeof dataCheck)
-// }
-// checkType('string')
-// checkType(undefined)
-// checkType(25)
-// checkType(true)
-// checkType(null)
+const checkType = (dataCheck) => {
+  console.log(typeof dataCheck)
+}
+checkType('string')
+checkType(undefined)
+checkType(25)
+checkType(true)
+checkType(null)
 // ..................................................................................................................
 // Write a JavaScript program that adds 2 numbers together.
 // ..................................................................................................................
-// let num1 = 1993 
-// let num2 = 1996
+let num1 = 0 
+let num2 = 0
 
-// function add() {
-//   return num1 + num2
-// }
-// console.log(add())
+const firstNum = (userNum1) => {
+  num1 = userNum1.value
+  console.log(userNum1.value)
+}
+
+const secondNum = (userNum2) => {
+  num2 = userNum2.value
+  console.log(userNum2.value)
+}
+
+function add(sum) {
+  sum = parseInt(num1) + parseInt(num2); 
+
+  document.getElementById('resultingSum').innerHTML = sum 
+}
+
 // ..................................................................................................................
 // Write a JavaScript program that runs only when 2 things are true.
 // ..................................................................................................................
-// function siteEnter(age, consent) {
-//   if(age > 20 && true) {
-//     return 'Welcome In! Have A Drink On Us, With Your First Order Of $20 Or More!'
-//   } 
-// }
-// console.log(siteEnter(21, true))
+
+let age = ""
+
+const ageLimit = (ageCheck) => {
+  age = ageCheck.value
+  console.log(ageCheck.value)
+}
+
+function siteEnter() {
+    document.getElementById('message').style.display = "none"; 
+  if(age > 20) {
+    document.getElementById('message').style.display = "inline-block";
+    document.getElementById('message').innerHTML = 'Welcome In! Have A Drink On Us, With Your First Order Of $20 Or More!'
+  } else if( age < 21 && age > 1 ){
+  document.getElementById('message').style.display = "inline-block";
+  document.getElementById('message').innerHTML = 'Im sorry little one, You must wait a while longer'
+}
+}
+
+function siteDeny() {
+  document.getElementById('message').style.display = "inline-block";
+  document.getElementById('message').innerHTML = 'Ok, see you next time!'
+}
+  
 // ..................................................................................................................
 // Write a JavaScript program that runs when 1 of 2 things are true.
 // ..................................................................................................................

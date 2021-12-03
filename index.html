@@ -21,6 +21,23 @@
     <button id="convertString2Num" onclick="convertStr()">Convert</button>
     <div id="resultingNum"></div>
     <hr>
+    <!-- This is for add function -->
+
+    <input type="text" id="number1" onkeyup="firstNum(this)">
+    <label for="number1"> + </label>
+    <input type="text" id="number2" onkeyup="secondNum(this)">
+    <button id="sumFinder" onclick="add()" >=</button>
+    <span id="resultingSum"></span>
+    <hr>
+    <!-- This is for 2 thing true function -->
+    <h3>Welcome please confirm age and consent to ENTER</h3>
+    <label for="age__input">So how old are you?</label>
+    <input type="text" id="age__Input" size="2" maxlength="3" onkeyup="ageLimit(this)">
+    <button id="confirm__enter" onclick="siteEnter()">LET ME IN</button>
+    <span>OR</span>
+    <button id="deny__enter" onclick="siteDeny()">MAYBE LATER</button>
+    <div id="message"></div>
+    <hr>
   </body>
   <script src="main.js"></script>
 </html>
