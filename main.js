@@ -154,13 +154,13 @@ const guessTwoCheck = (g2) => {
 }
 
 const bothWrong = () =>{
-  let randomNum = Math.floor((Math.random() *11) + 1);
+  let randomNum = Math.floor((Math.random() *10) + 1);
   console.log(randomNum)
 
   if(guessOneCheck != randomNum && guessTwoCheck != randomNum){
-    document.getElementById('guessAnswer').innerHTML = 'HaHa you lose better luck next time!!'
+    document.getElementById('guessAnswer').innerHTML = 'HaHa you lose better luck next time!! My number was' + ' ' + randomNum;
   } else if(guessOneCheck == randomNum || guessTwoCheck == randomNum){
-    document.getElementById('guessAnswer').innerHTML = 'What! No you cheated, or omg are you a psychic!!!'
+    document.getElementById('guessAnswer').innerHTML = 'What! No you cheated, or omg are you a psychic!!! My number was' + ' ' + randomNum;
   }
 }
 
