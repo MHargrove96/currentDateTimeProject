@@ -38,6 +38,24 @@
     <button id="deny__enter" onclick="siteDeny()">MAYBE LATER</button>
     <div id="message"></div>
     <hr>
+    <!-- This is for the when 1 of 2 is true function -->
+    <h3>HELLO</h3>
+    <p>Are either of you older that I am.</p>
+    <label for="">Person One</label>
+    <input type="text" id="year1" placeholder="Enter your birth year" onkeyup="yearOneCheck(this)">
+    <label for="">Person Two</label>
+    <input type="text" id="year2" placeholder="Enter your birth year" onkeyup="(yearTwoCheck (this))">
+    <br>
+    <button id="yearSubmit" onclick="onlyOne()" >Submit</button>
+    <span id="decision"></span>
+    <hr>
+    <!-- This is for the both wrong function -->
+    <h3>CAN YOU GUESS MY NUMBER!!</h3>
+    <h4>You get two guess and my number is random every time you try. Goodluck!</h4>
+    <input type="text" onkeyup="guessOneCheck(this)" placeholder="enter your guess 1-10" id="guessOne" maxlength="2">
+    <input type="text" onkeyup="guessTwoCheck(this)" placeholder="enter your guess 1-10" id="guessTwo" maxlength="2">
+    <button id="submit__Guesses" onclick="bothWrong()">SUBMIT GUESSES</button>
+    <div id="guessAnswer"></div>
   </body>
   <script src="main.js"></script>
 </html>

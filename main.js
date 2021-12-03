@@ -115,23 +115,55 @@ function siteDeny() {
 // ..................................................................................................................
 // Write a JavaScript program that runs when 1 of 2 things are true.
 // ..................................................................................................................
-// const onlyOne = (yr1, yr2) =>{
-//   if(!yr1 || yr2 < 1996){
-//     return 'older'
-//   } else {
-//     return 'younger'
-//   }
-// }
-// console.log(onlyOne(2000, 1992))
+let year1 = ''
+let year2 = ''
+
+const yearOneCheck = (yr1) => {
+  year1 = yr1.value
+  console.log(yr1.value)
+}
+
+const yearTwoCheck = (yr2) => {
+  year2 = yr2.value
+  console.log(yr2.value)
+}
+
+const onlyOne = () => {
+  if(year1 < 1996 || year2 < 1996) {
+    document.getElementById('decision').innerHTML = 'You may enter as you are dirty old'
+  } else {
+      document.getElementById('decision').innerHTML = 'childern may not enter, scram before you get it!'
+    }
+}
+
 // ..................................................................................................................
 // Write a JavaScript program that runs when both things are not true.  
 // ..................................................................................................................
-// const bothWrong = (op1, op2) =>{
-//   if(!op1 && op2 === false){
-//     return 'it works'
-//   }
-// }
-// console.log(bothWrong(false, false))
+
+let guessOne = ''
+let guessTwo = ''
+
+const guessOneCheck = (g1) => {
+  guessOne = g1.value
+  console.log(g1.value)
+}
+
+const guessTwoCheck = (g2) => {
+  guessTwo = g2.value
+  console.log(g2.value)
+}
+
+const bothWrong = () =>{
+  let randomNum = Math.floor((Math.random() *11) + 1);
+  console.log(randomNum)
+
+  if(guessOneCheck != randomNum && guessTwoCheck != randomNum){
+    document.getElementById('guessAnswer').innerHTML = 'HaHa you lose better luck next time!!'
+  } else if(guessOneCheck == randomNum || guessTwoCheck == randomNum){
+    document.getElementById('guessAnswer').innerHTML = 'What! No you cheated, or omg are you a psychic!!!'
+  }
+}
+
 // ..................................................................................................................
 // ***************************
 //         PART TWO
